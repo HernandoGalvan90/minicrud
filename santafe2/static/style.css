@@ -1,0 +1,135 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f6;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 900px; /* No se estira más de 900px en pantallas grandes */
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.subtitulo {
+    text-align: center;
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+form input[type="text"],
+form textarea,
+form select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+form input[type="text"] { flex: 2 1 200px; }
+form select { flex: 1 1 150px; }
+form textarea { flex: 1 1 100%; resize: vertical; }
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#btnGuardar {
+    background-color: #007bff;
+    color: white;
+    flex: 1 1 100%;
+}
+
+#btnGuardar:hover { background-color: #0056b3; }
+
+#btnCancelar {
+    background-color: #6c757d;
+    color: white;
+    flex: 1 1 100%;
+}
+
+#btnCancelar:hover { background-color: #5a6268; }
+
+.tabla-contenedor {
+    overflow-x: auto; 
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px; 
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+}
+
+tr:hover {
+    background-color: #f1f1f1; 
+}
+
+.btn-editar, .btn-eliminar {
+    padding: 6px 10px;
+    font-size: 12px;
+    margin-right: 5px;
+}
+
+.btn-editar { background-color: #ffc107; color: #333; }
+.btn-editar:hover { background-color: #e0a800; }
+
+.btn-eliminar { background-color: #dc3545; color: white; }
+.btn-eliminar:hover { background-color: #c82333; }
+
+#mensaje {
+    padding: 12px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#mensaje.exito { background-color: #d4edda; color: #155724; }
+#mensaje.error { background-color: #f8d7da; color: #721c24; }
+
+.oculto {
+    display: none !important;
+}

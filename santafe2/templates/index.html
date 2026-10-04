@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Tareas - CRUD</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Gestión de Tareas</h1>
+
+        <div id="mensaje" class="oculto"></div>
+
+        <form id="taskForm">
+            <input type="hidden" id="taskId">
+            <input type="text" id="titulo" placeholder="Título (obligatorio)" required>
+            <textarea id="descripcion" placeholder="Descripción (opcional)" rows="2"></textarea>
+            <select id="estado">
+                <option value="pendiente">Pendiente</option>
+                <option value="en progreso">En progreso</option>
+                <option value="completada">Completada</option>
+            </select>
+            <button type="submit" id="btnGuardar">Guardar Tarea</button>
+            <button type="button" id="btnCancelar" class="oculto" onclick="resetForm()">Cancelar</button>
+        </form>
+
+        <div class="tabla-contenedor">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Título</th>
+                        <th>Descripción</th>
+                        <th>Estado</th>
+                        <th>Fecha</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaTareas"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+CREATE DATABASE TEST101;
+GO
+USE TEST101;
+GO
+
+CREATE TABLE diego (
+    id INT IDENTITY(1,1) PRIMARY KEY, 
+    titulo NVARCHAR(255) NOT NULL,
+    descripcion NVARCHAR(MAX),
+    estado NVARCHAR(100) DEFAULT 'pendiente',
+    fecha_creacion DATETIME DEFAULT GETDATE()
+
+);
+GO
+SELECT * FROM diego; 
